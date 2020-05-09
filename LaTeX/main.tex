@@ -1,0 +1,143 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[italian]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{fancyhdr}
+\usepackage{tesi}
+\usepackage{listings}
+\usepackage{hyperref}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{3}
+
+%-------------------------------
+% DEFINIZIONE DEGLI ENVIRONMENT
+%-------------------------------
+
+\newtheorem{pro}{Problema}[chapter]
+\newenvironment{prob}
+    {\begin{pro}\begin{normalfont}}
+    {\hfill $\spadesuit$ \end{normalfont}\end{pro}}
+
+\newtheorem{teor}{Teorema}[section]
+\newenvironment{teorema}
+    {\begin{teor}\textit }
+    {\hfill  \end{teor}}
+
+\newtheorem{defn}{Definizione}[section]
+\newenvironment{de}
+    {\begin{defn}\begin{normalfont}}
+    {\hfill $\clubsuit$ \end{normalfont}\end{defn}}
+
+\newtheorem{theorem}{Teorema}
+%-----------------------------
+% CONFIGURAZIONE DELLA PAGINA
+%-----------------------------
+
+\hfuzz2pt % Don't bother to report over-full boxes if over-edge is < 2pt
+
+\fancypagestyle{plain}{
+\fancyhead{}\renewcommand{\headrulewidth}{0pt} } \pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\small CAP. \thechapter \textit{ #1}} {} }
+\renewcommand{\sectionmark}[1]{\markright{\small  \thesection \textit{ #1}} {} }
+\voffset=-20pt    % distanza tra il limite superiore del foglio e l'intestazione
+\headsep=40pt     % distanza  l'intestazione ed il testo del corpo
+\hoffset=0 pt     % misura equivalente al margine sinistro
+\textheight=620pt % altezza del corpo del testo
+\textwidth=435pt  % larghezza del corpo del testo
+\footskip=40pt    % distanza tra il testo del corpo ed il pie' di pagina
+\fancyhead{}      % cancella qualsiasi impostazione per l'intestazione
+\fancyfoot{}      % cancella qualsiasi impostazione per il pie' di pagina
+\headwidth=435pt  % larghezza del'intestazione e del pie' di pagina
+\fancyhead[R]{\rightmark} \fancyfoot[L]{\leftmark}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}   % spessore della linea dell'intestazione
+\renewcommand{\footrulewidth}{0.3pt}   % spessore della linea del pi�di pagina
+
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+
+
+
+%--------------------------
+% MODIFICARE DA QUI IN POI
+%--------------------------
+
+\begin{document}
+
+\raggedright
+
+\dedicate{"Non mi fido molto delle statistiche, perch\'e un uomo con la testa nel forno acceso e i piedi nel congelatore statisticamente ha una temperatura media."\\CHARLES BUKOWSKI}
+
+\corso{INFORMATICA} \titoloTesi{I Terremoti: Analisi dei Dati e Tecniche di Previsione} \anno{2018/2019}
+\relatore{Dott. Francesco Pasquale}
+\autore{Alex Mollica}
+
+
+\baselineskip=21pt
+
+\intestazione
+
+%------------------------------------------------
+% INTRODUZIONE E RINGRAZIAMENTI (NON MODIFICARE)
+%------------------------------------------------
+\headheight=15pt
+\fancypagestyle{plain}{
+\fancyhead{}\renewcommand{\headrulewidth}{0pt} } \pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\small Cap. \thechapter \textit{ #1}} {} }
+\renewcommand{\sectionmark}[1]{\markright{\small  \S \thesection \textit{ #1}} {} }
+\voffset=-20pt                         % distanza tra il limite superiore del foglio e l'intestazione
+\headsep=40pt                          % distanza  l'intestazione ed il testo del corpo
+\hoffset=0pt                           % misura equivalente al margine sinistro
+\textheight=620pt                      % altezza del corpo del testo
+\textwidth=435pt                       % larghezza del corpo del testo
+\footskip=40pt                         % distanza tra il testo del corpo ed il pie' di pagina
+\fancyhead{}                           % cancella qualsiasi impostazione per l'intestazione
+\fancyfoot{}                           % cancella qualsiasi impostazione per il pie' di pagina
+\headwidth=435pt                       % larghezza del'intestazione e del pie' di pagina
+\fancyhead[R]{\rightmark} \fancyfoot[L]{\leftmark}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}   % spessore della linea dell'intestazione
+\renewcommand{\footrulewidth}{0.3pt}   % spessore della linea del pi�di pagina
+
+\pagenumbering{Roman} \tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\fancyhead[R]{Introduzione} \fancyfoot[L]{Introduzione}
+\fancyfoot[R]{\thepage}
+
+\include{Introduzione}
+
+\fancyhf{} %elimina header/footer vecchi
+
+
+\fancyhead[R]{\rightmark} \fancyhead[L]{\leftmark}
+\fancyfoot[R]{\thepage}
+
+
+
+
+
+%---------------------
+% INCLUSIONE CAPITOLI
+%---------------------
+\include{Background}
+\include{BigData}
+\include{AnalisiDeiDati}
+\include{Conclusioni}
+\include{Ringraziamenti}
+\listoffigures
+\addcontentsline{toc}{chapter}{Elenco delle figure}
+\bibliographystyle{plain}
+\bibliography{bibliografia}
+
+\end{document}
