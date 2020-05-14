@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d98c8b29998c4601910e9f682092f919 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d98c8b29998c4601910e9f682092f919" ></div>
+        
+</body>
+<script>    
+    
+            var map_d98c8b29998c4601910e9f682092f919 = L.map(
+                "map_d98c8b29998c4601910e9f682092f919",
+                {
+                    center: [42.5, 12.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_26afd05f94114fbfb448e8004616bfe7 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d98c8b29998c4601910e9f682092f919);
+        
+    
+        function geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2 = L.geoJson(null, {
+                onEachFeature: geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2_onEachFeature,
+            
+                style: geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2_styler,
+        });
+        function geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2_add (data) {
+            geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2_add({"features": [{"geometry": {"coordinates": [[[-124.0, 28.0], [-112.036, 28.0], [-112.036, 22.37], [-124.0, 22.37], [-124.0, 28.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-124.0, 22.37], "upper_right": [-112.036, 28.0]}, "type": "FeatureCollection"});
+        
+    
+        var popup_2fe5d30e8a7b491d80b27dcb69728227 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e10e4249230478fb1882151b2927e79 = $(`<div id="html_5e10e4249230478fb1882151b2927e79" style="width: 100.0%; height: 100.0%;">numero di terremoti: 78, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_2fe5d30e8a7b491d80b27dcb69728227.setContent(html_5e10e4249230478fb1882151b2927e79);
+        
+
+        geo_json_28c2921ad6e44ee6b2bd2c58ab47daa2.bindPopup(popup_2fe5d30e8a7b491d80b27dcb69728227)
+        ;
+
+        
+    
+    
+        function geo_json_c664a6b314d0421caa95e818cfc8821a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_c664a6b314d0421caa95e818cfc8821a_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_c664a6b314d0421caa95e818cfc8821a = L.geoJson(null, {
+                onEachFeature: geo_json_c664a6b314d0421caa95e818cfc8821a_onEachFeature,
+            
+                style: geo_json_c664a6b314d0421caa95e818cfc8821a_styler,
+        });
+        function geo_json_c664a6b314d0421caa95e818cfc8821a_add (data) {
+            geo_json_c664a6b314d0421caa95e818cfc8821a.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_c664a6b314d0421caa95e818cfc8821a_add({"features": [{"geometry": {"coordinates": [[[-112.036, 28.0], [-100.072, 28.0], [-100.072, 22.37], [-112.036, 22.37], [-112.036, 28.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-112.036, 22.37], "upper_right": [-100.072, 28.0]}, "type": "FeatureCollection"});
+        
+    
+        var popup_9f4d1b7c04e14182b867247393c28891 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c9c4f012add492cbed597e248b2accc = $(`<div id="html_0c9c4f012add492cbed597e248b2accc" style="width: 100.0%; height: 100.0%;">numero di terremoti: 893, Fattore di rischio 0-100: 0.5</div>`)[0];
+            popup_9f4d1b7c04e14182b867247393c28891.setContent(html_0c9c4f012add492cbed597e248b2accc);
+        
+
+        geo_json_c664a6b314d0421caa95e818cfc8821a.bindPopup(popup_9f4d1b7c04e14182b867247393c28891)
+        ;
+
+        
+    
+    
+        function geo_json_70d44c8397604304914b27036f91112c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_70d44c8397604304914b27036f91112c_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_70d44c8397604304914b27036f91112c = L.geoJson(null, {
+                onEachFeature: geo_json_70d44c8397604304914b27036f91112c_onEachFeature,
+            
+                style: geo_json_70d44c8397604304914b27036f91112c_styler,
+        });
+        function geo_json_70d44c8397604304914b27036f91112c_add (data) {
+            geo_json_70d44c8397604304914b27036f91112c.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_70d44c8397604304914b27036f91112c_add({"features": [{"geometry": {"coordinates": [[[-100.072, 28.0], [-88.108, 28.0], [-88.108, 22.37], [-100.072, 22.37], [-100.072, 28.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-100.072, 22.37], "upper_right": [-88.108, 28.0]}, "type": "FeatureCollection"});
+        
+    
+        var popup_707506b2528942ecbafb183da1df1f5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83ce50994eac45ae9dad56b2496c59b4 = $(`<div id="html_83ce50994eac45ae9dad56b2496c59b4" style="width: 100.0%; height: 100.0%;">numero di terremoti: 30, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_707506b2528942ecbafb183da1df1f5b.setContent(html_83ce50994eac45ae9dad56b2496c59b4);
+        
+
+        geo_json_70d44c8397604304914b27036f91112c.bindPopup(popup_707506b2528942ecbafb183da1df1f5b)
+        ;
+
+        
+    
+    
+        function geo_json_12bca4b619bc479cae190994c8df5a7f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_12bca4b619bc479cae190994c8df5a7f_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_12bca4b619bc479cae190994c8df5a7f = L.geoJson(null, {
+                onEachFeature: geo_json_12bca4b619bc479cae190994c8df5a7f_onEachFeature,
+            
+                style: geo_json_12bca4b619bc479cae190994c8df5a7f_styler,
+        });
+        function geo_json_12bca4b619bc479cae190994c8df5a7f_add (data) {
+            geo_json_12bca4b619bc479cae190994c8df5a7f.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_12bca4b619bc479cae190994c8df5a7f_add({"features": [{"geometry": {"coordinates": [[[-88.108, 28.0], [-76.144, 28.0], [-76.144, 22.37], [-88.108, 22.37], [-88.108, 28.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-88.108, 22.37], "upper_right": [-76.144, 28.0]}, "type": "FeatureCollection"});
+        
+    
+        var popup_a358c82c536b482e87be0ac8a21a38e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_feede0c594b74be3ba57a8fe27f3b983 = $(`<div id="html_feede0c594b74be3ba57a8fe27f3b983" style="width: 100.0%; height: 100.0%;">numero di terremoti: 14, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_a358c82c536b482e87be0ac8a21a38e2.setContent(html_feede0c594b74be3ba57a8fe27f3b983);
+        
+
+        geo_json_12bca4b619bc479cae190994c8df5a7f.bindPopup(popup_a358c82c536b482e87be0ac8a21a38e2)
+        ;
+
+        
+    
+    
+        function geo_json_6af27a16b604413c999fddc2f0f9beae_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_6af27a16b604413c999fddc2f0f9beae_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_6af27a16b604413c999fddc2f0f9beae = L.geoJson(null, {
+                onEachFeature: geo_json_6af27a16b604413c999fddc2f0f9beae_onEachFeature,
+            
+                style: geo_json_6af27a16b604413c999fddc2f0f9beae_styler,
+        });
+        function geo_json_6af27a16b604413c999fddc2f0f9beae_add (data) {
+            geo_json_6af27a16b604413c999fddc2f0f9beae.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_6af27a16b604413c999fddc2f0f9beae_add({"features": [{"geometry": {"coordinates": [[[-76.144, 28.0], [-64.18, 28.0], [-64.18, 22.37], [-76.144, 22.37], [-76.144, 28.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-76.144, 22.37], "upper_right": [-64.18, 28.0]}, "type": "FeatureCollection"});
+        
+    
+        var popup_ef3a564662ab426081ce6c1303cdcc16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fd3a49d0e1348e784fb0401738e6d23 = $(`<div id="html_7fd3a49d0e1348e784fb0401738e6d23" style="width: 100.0%; height: 100.0%;">numero di terremoti: 14, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_ef3a564662ab426081ce6c1303cdcc16.setContent(html_7fd3a49d0e1348e784fb0401738e6d23);
+        
+
+        geo_json_6af27a16b604413c999fddc2f0f9beae.bindPopup(popup_ef3a564662ab426081ce6c1303cdcc16)
+        ;
+
+        
+    
+    
+        function geo_json_160f93a2023342c4976cd3c2cbe7dca5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "yellow", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_160f93a2023342c4976cd3c2cbe7dca5_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_160f93a2023342c4976cd3c2cbe7dca5 = L.geoJson(null, {
+                onEachFeature: geo_json_160f93a2023342c4976cd3c2cbe7dca5_onEachFeature,
+            
+                style: geo_json_160f93a2023342c4976cd3c2cbe7dca5_styler,
+        });
+        function geo_json_160f93a2023342c4976cd3c2cbe7dca5_add (data) {
+            geo_json_160f93a2023342c4976cd3c2cbe7dca5.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_160f93a2023342c4976cd3c2cbe7dca5_add({"features": [{"geometry": {"coordinates": [[[-124.0, 33.629999999999995], [-112.036, 33.629999999999995], [-112.036, 28.0], [-124.0, 28.0], [-124.0, 33.629999999999995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-124.0, 28.0], "upper_right": [-112.036, 33.629999999999995]}, "type": "FeatureCollection"});
+        
+    
+        var popup_68d5f075b02a47659b31ae504b113d73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74fb5fdd9f0e4bdab7a1ecb6ee0a036b = $(`<div id="html_74fb5fdd9f0e4bdab7a1ecb6ee0a036b" style="width: 100.0%; height: 100.0%;">numero di terremoti: 206153, Fattore di rischio 0-100: 39.8</div>`)[0];
+            popup_68d5f075b02a47659b31ae504b113d73.setContent(html_74fb5fdd9f0e4bdab7a1ecb6ee0a036b);
+        
+
+        geo_json_160f93a2023342c4976cd3c2cbe7dca5.bindPopup(popup_68d5f075b02a47659b31ae504b113d73)
+        ;
+
+        
+    
+    
+        function geo_json_e6e5c7e4916c415998465d104ac498e9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_e6e5c7e4916c415998465d104ac498e9_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_e6e5c7e4916c415998465d104ac498e9 = L.geoJson(null, {
+                onEachFeature: geo_json_e6e5c7e4916c415998465d104ac498e9_onEachFeature,
+            
+                style: geo_json_e6e5c7e4916c415998465d104ac498e9_styler,
+        });
+        function geo_json_e6e5c7e4916c415998465d104ac498e9_add (data) {
+            geo_json_e6e5c7e4916c415998465d104ac498e9.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_e6e5c7e4916c415998465d104ac498e9_add({"features": [{"geometry": {"coordinates": [[[-112.036, 33.629999999999995], [-100.072, 33.629999999999995], [-100.072, 28.0], [-112.036, 28.0], [-112.036, 33.629999999999995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-112.036, 28.0], "upper_right": [-100.072, 33.629999999999995]}, "type": "FeatureCollection"});
+        
+    
+        var popup_dbc32ee0375a41ca80e9c875c7be4eaa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb1534cde0c2470eb750c9f59d5b9fff = $(`<div id="html_bb1534cde0c2470eb750c9f59d5b9fff" style="width: 100.0%; height: 100.0%;">numero di terremoti: 349, Fattore di rischio 0-100: 0.1</div>`)[0];
+            popup_dbc32ee0375a41ca80e9c875c7be4eaa.setContent(html_bb1534cde0c2470eb750c9f59d5b9fff);
+        
+
+        geo_json_e6e5c7e4916c415998465d104ac498e9.bindPopup(popup_dbc32ee0375a41ca80e9c875c7be4eaa)
+        ;
+
+        
+    
+    
+        function geo_json_13f4beb0c1404bc2a02b6b4e23625145_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_13f4beb0c1404bc2a02b6b4e23625145_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_13f4beb0c1404bc2a02b6b4e23625145 = L.geoJson(null, {
+                onEachFeature: geo_json_13f4beb0c1404bc2a02b6b4e23625145_onEachFeature,
+            
+                style: geo_json_13f4beb0c1404bc2a02b6b4e23625145_styler,
+        });
+        function geo_json_13f4beb0c1404bc2a02b6b4e23625145_add (data) {
+            geo_json_13f4beb0c1404bc2a02b6b4e23625145.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_13f4beb0c1404bc2a02b6b4e23625145_add({"features": [{"geometry": {"coordinates": [[[-100.072, 33.629999999999995], [-88.108, 33.629999999999995], [-88.108, 28.0], [-100.072, 28.0], [-100.072, 33.629999999999995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-100.072, 28.0], "upper_right": [-88.108, 33.629999999999995]}, "type": "FeatureCollection"});
+        
+    
+        var popup_a6347cfc1db14e9a8d1f1aa2b288dcd2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e696a9b4cfb141fe87e69e30214d0c47 = $(`<div id="html_e696a9b4cfb141fe87e69e30214d0c47" style="width: 100.0%; height: 100.0%;">numero di terremoti: 297, Fattore di rischio 0-100: 0.1</div>`)[0];
+            popup_a6347cfc1db14e9a8d1f1aa2b288dcd2.setContent(html_e696a9b4cfb141fe87e69e30214d0c47);
+        
+
+        geo_json_13f4beb0c1404bc2a02b6b4e23625145.bindPopup(popup_a6347cfc1db14e9a8d1f1aa2b288dcd2)
+        ;
+
+        
+    
+    
+        function geo_json_56695a8a12174956a475349ddd963d6e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_56695a8a12174956a475349ddd963d6e_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_56695a8a12174956a475349ddd963d6e = L.geoJson(null, {
+                onEachFeature: geo_json_56695a8a12174956a475349ddd963d6e_onEachFeature,
+            
+                style: geo_json_56695a8a12174956a475349ddd963d6e_styler,
+        });
+        function geo_json_56695a8a12174956a475349ddd963d6e_add (data) {
+            geo_json_56695a8a12174956a475349ddd963d6e.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_56695a8a12174956a475349ddd963d6e_add({"features": [{"geometry": {"coordinates": [[[-88.108, 33.629999999999995], [-76.144, 33.629999999999995], [-76.144, 28.0], [-88.108, 28.0], [-88.108, 33.629999999999995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-88.108, 28.0], "upper_right": [-76.144, 33.629999999999995]}, "type": "FeatureCollection"});
+        
+    
+        var popup_c5dc392a8ac3440d83df09076b0b6545 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4479e71d4fb4287b5c088443ac637fb = $(`<div id="html_c4479e71d4fb4287b5c088443ac637fb" style="width: 100.0%; height: 100.0%;">numero di terremoti: 256, Fattore di rischio 0-100: 0.1</div>`)[0];
+            popup_c5dc392a8ac3440d83df09076b0b6545.setContent(html_c4479e71d4fb4287b5c088443ac637fb);
+        
+
+        geo_json_56695a8a12174956a475349ddd963d6e.bindPopup(popup_c5dc392a8ac3440d83df09076b0b6545)
+        ;
+
+        
+    
+    
+        function geo_json_3df348407823410c8477280fad87adb1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_3df348407823410c8477280fad87adb1_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_3df348407823410c8477280fad87adb1 = L.geoJson(null, {
+                onEachFeature: geo_json_3df348407823410c8477280fad87adb1_onEachFeature,
+            
+                style: geo_json_3df348407823410c8477280fad87adb1_styler,
+        });
+        function geo_json_3df348407823410c8477280fad87adb1_add (data) {
+            geo_json_3df348407823410c8477280fad87adb1.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_3df348407823410c8477280fad87adb1_add({"features": [{"geometry": {"coordinates": [[[-76.144, 33.629999999999995], [-64.18, 33.629999999999995], [-64.18, 28.0], [-76.144, 28.0], [-76.144, 33.629999999999995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-76.144, 28.0], "upper_right": [-64.18, 33.629999999999995]}, "type": "FeatureCollection"});
+        
+    
+        var popup_63e8b42c4d674977a277e2a4f809cab3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b39298202ba471c9dccc3b932d66b41 = $(`<div id="html_0b39298202ba471c9dccc3b932d66b41" style="width: 100.0%; height: 100.0%;">numero di terremoti: 22, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_63e8b42c4d674977a277e2a4f809cab3.setContent(html_0b39298202ba471c9dccc3b932d66b41);
+        
+
+        geo_json_3df348407823410c8477280fad87adb1.bindPopup(popup_63e8b42c4d674977a277e2a4f809cab3)
+        ;
+
+        
+    
+    
+        function geo_json_97bd815133124aecb61a5c3e1228a0ae_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "red", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+        function geo_json_97bd815133124aecb61a5c3e1228a0ae_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_97bd815133124aecb61a5c3e1228a0ae = L.geoJson(null, {
+                onEachFeature: geo_json_97bd815133124aecb61a5c3e1228a0ae_onEachFeature,
+            
+                style: geo_json_97bd815133124aecb61a5c3e1228a0ae_styler,
+        });
+        function geo_json_97bd815133124aecb61a5c3e1228a0ae_add (data) {
+            geo_json_97bd815133124aecb61a5c3e1228a0ae.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_97bd815133124aecb61a5c3e1228a0ae_add({"features": [{"geometry": {"coordinates": [[[-124.0, 39.260000000000005], [-112.036, 39.260000000000005], [-112.036, 33.63], [-124.0, 33.63], [-124.0, 39.260000000000005]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-124.0, 33.63], "upper_right": [-112.036, 39.260000000000005]}, "type": "FeatureCollection"});
+        
+    
+        var popup_f38353ee375544a282c742403686a3c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_70aa0b9cd93f4802a95f394520312684 = $(`<div id="html_70aa0b9cd93f4802a95f394520312684" style="width: 100.0%; height: 100.0%;">numero di terremoti: 566634, Fattore di rischio 0-100: 100.0</div>`)[0];
+            popup_f38353ee375544a282c742403686a3c0.setContent(html_70aa0b9cd93f4802a95f394520312684);
+        
+
+        geo_json_97bd815133124aecb61a5c3e1228a0ae.bindPopup(popup_f38353ee375544a282c742403686a3c0)
+        ;
+
+        
+    
+    
+        function geo_json_48be985a5f704067888dc1ee9c81d9fd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_48be985a5f704067888dc1ee9c81d9fd_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_48be985a5f704067888dc1ee9c81d9fd = L.geoJson(null, {
+                onEachFeature: geo_json_48be985a5f704067888dc1ee9c81d9fd_onEachFeature,
+            
+                style: geo_json_48be985a5f704067888dc1ee9c81d9fd_styler,
+        });
+        function geo_json_48be985a5f704067888dc1ee9c81d9fd_add (data) {
+            geo_json_48be985a5f704067888dc1ee9c81d9fd.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_48be985a5f704067888dc1ee9c81d9fd_add({"features": [{"geometry": {"coordinates": [[[-112.036, 39.260000000000005], [-100.072, 39.260000000000005], [-100.072, 33.63], [-112.036, 33.63], [-112.036, 39.260000000000005]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-112.036, 33.63], "upper_right": [-100.072, 39.260000000000005]}, "type": "FeatureCollection"});
+        
+    
+        var popup_101a2d8d981b47968d56cc5bd9ec6eaa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2b9d0e9f4294074947303c16ac0116f = $(`<div id="html_c2b9d0e9f4294074947303c16ac0116f" style="width: 100.0%; height: 100.0%;">numero di terremoti: 1639, Fattore di rischio 0-100: 0.5</div>`)[0];
+            popup_101a2d8d981b47968d56cc5bd9ec6eaa.setContent(html_c2b9d0e9f4294074947303c16ac0116f);
+        
+
+        geo_json_48be985a5f704067888dc1ee9c81d9fd.bindPopup(popup_101a2d8d981b47968d56cc5bd9ec6eaa)
+        ;
+
+        
+    
+    
+        function geo_json_0252705a19a34315bf315ed10ed6d21e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_0252705a19a34315bf315ed10ed6d21e_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_0252705a19a34315bf315ed10ed6d21e = L.geoJson(null, {
+                onEachFeature: geo_json_0252705a19a34315bf315ed10ed6d21e_onEachFeature,
+            
+                style: geo_json_0252705a19a34315bf315ed10ed6d21e_styler,
+        });
+        function geo_json_0252705a19a34315bf315ed10ed6d21e_add (data) {
+            geo_json_0252705a19a34315bf315ed10ed6d21e.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_0252705a19a34315bf315ed10ed6d21e_add({"features": [{"geometry": {"coordinates": [[[-100.072, 39.260000000000005], [-88.108, 39.260000000000005], [-88.108, 33.63], [-100.072, 33.63], [-100.072, 39.260000000000005]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-100.072, 33.63], "upper_right": [-88.108, 39.260000000000005]}, "type": "FeatureCollection"});
+        
+    
+        var popup_9eb020ef6f6341368e9ccb60371184ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56c080882f1f4a419d3e2362eb0c6d3c = $(`<div id="html_56c080882f1f4a419d3e2362eb0c6d3c" style="width: 100.0%; height: 100.0%;">numero di terremoti: 21662, Fattore di rischio 0-100: 5.8</div>`)[0];
+            popup_9eb020ef6f6341368e9ccb60371184ae.setContent(html_56c080882f1f4a419d3e2362eb0c6d3c);
+        
+
+        geo_json_0252705a19a34315bf315ed10ed6d21e.bindPopup(popup_9eb020ef6f6341368e9ccb60371184ae)
+        ;
+
+        
+    
+    
+        function geo_json_16fe644a9466494194af0ac144cce54b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_16fe644a9466494194af0ac144cce54b_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_16fe644a9466494194af0ac144cce54b = L.geoJson(null, {
+                onEachFeature: geo_json_16fe644a9466494194af0ac144cce54b_onEachFeature,
+            
+                style: geo_json_16fe644a9466494194af0ac144cce54b_styler,
+        });
+        function geo_json_16fe644a9466494194af0ac144cce54b_add (data) {
+            geo_json_16fe644a9466494194af0ac144cce54b.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_16fe644a9466494194af0ac144cce54b_add({"features": [{"geometry": {"coordinates": [[[-88.108, 39.260000000000005], [-76.144, 39.260000000000005], [-76.144, 33.63], [-88.108, 33.63], [-88.108, 39.260000000000005]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-88.108, 33.63], "upper_right": [-76.144, 39.260000000000005]}, "type": "FeatureCollection"});
+        
+    
+        var popup_434fa37dda174405a4d0bdc55fbf99a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1297d67dbb4940ccb7fcdea16fb8a76a = $(`<div id="html_1297d67dbb4940ccb7fcdea16fb8a76a" style="width: 100.0%; height: 100.0%;">numero di terremoti: 1577, Fattore di rischio 0-100: 0.4</div>`)[0];
+            popup_434fa37dda174405a4d0bdc55fbf99a5.setContent(html_1297d67dbb4940ccb7fcdea16fb8a76a);
+        
+
+        geo_json_16fe644a9466494194af0ac144cce54b.bindPopup(popup_434fa37dda174405a4d0bdc55fbf99a5)
+        ;
+
+        
+    
+    
+        function geo_json_069c18f3324742be8d4964ed1ee170bf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_069c18f3324742be8d4964ed1ee170bf_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_069c18f3324742be8d4964ed1ee170bf = L.geoJson(null, {
+                onEachFeature: geo_json_069c18f3324742be8d4964ed1ee170bf_onEachFeature,
+            
+                style: geo_json_069c18f3324742be8d4964ed1ee170bf_styler,
+        });
+        function geo_json_069c18f3324742be8d4964ed1ee170bf_add (data) {
+            geo_json_069c18f3324742be8d4964ed1ee170bf.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_069c18f3324742be8d4964ed1ee170bf_add({"features": [{"geometry": {"coordinates": [[[-76.144, 39.260000000000005], [-64.18, 39.260000000000005], [-64.18, 33.63], [-76.144, 33.63], [-76.144, 39.260000000000005]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-76.144, 33.63], "upper_right": [-64.18, 39.260000000000005]}, "type": "FeatureCollection"});
+        
+    
+        var popup_9141832c71eb4fcd8472860ba6b1cc24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b1c1c00269354f37b3258043be1e52a1 = $(`<div id="html_b1c1c00269354f37b3258043be1e52a1" style="width: 100.0%; height: 100.0%;">numero di terremoti: 6, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_9141832c71eb4fcd8472860ba6b1cc24.setContent(html_b1c1c00269354f37b3258043be1e52a1);
+        
+
+        geo_json_069c18f3324742be8d4964ed1ee170bf.bindPopup(popup_9141832c71eb4fcd8472860ba6b1cc24)
+        ;
+
+        
+    
+    
+        function geo_json_174598fe807c482b865c22d9048828ef_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_174598fe807c482b865c22d9048828ef_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_174598fe807c482b865c22d9048828ef = L.geoJson(null, {
+                onEachFeature: geo_json_174598fe807c482b865c22d9048828ef_onEachFeature,
+            
+                style: geo_json_174598fe807c482b865c22d9048828ef_styler,
+        });
+        function geo_json_174598fe807c482b865c22d9048828ef_add (data) {
+            geo_json_174598fe807c482b865c22d9048828ef.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_174598fe807c482b865c22d9048828ef_add({"features": [{"geometry": {"coordinates": [[[-124.0, 44.89], [-112.036, 44.89], [-112.036, 39.260000000000005], [-124.0, 39.260000000000005], [-124.0, 44.89]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-124.0, 39.260000000000005], "upper_right": [-112.036, 44.89]}, "type": "FeatureCollection"});
+        
+    
+        var popup_e31348ec8355403cb16193ac06de39ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7457bcf3e616444286b3ca9a11aa6eb3 = $(`<div id="html_7457bcf3e616444286b3ca9a11aa6eb3" style="width: 100.0%; height: 100.0%;">numero di terremoti: 35123, Fattore di rischio 0-100: 6.0</div>`)[0];
+            popup_e31348ec8355403cb16193ac06de39ff.setContent(html_7457bcf3e616444286b3ca9a11aa6eb3);
+        
+
+        geo_json_174598fe807c482b865c22d9048828ef.bindPopup(popup_e31348ec8355403cb16193ac06de39ff)
+        ;
+
+        
+    
+    
+        function geo_json_0123ba40da454588a83b9cdc17ae7894_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_0123ba40da454588a83b9cdc17ae7894_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_0123ba40da454588a83b9cdc17ae7894 = L.geoJson(null, {
+                onEachFeature: geo_json_0123ba40da454588a83b9cdc17ae7894_onEachFeature,
+            
+                style: geo_json_0123ba40da454588a83b9cdc17ae7894_styler,
+        });
+        function geo_json_0123ba40da454588a83b9cdc17ae7894_add (data) {
+            geo_json_0123ba40da454588a83b9cdc17ae7894.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_0123ba40da454588a83b9cdc17ae7894_add({"features": [{"geometry": {"coordinates": [[[-112.036, 44.89], [-100.072, 44.89], [-100.072, 39.260000000000005], [-112.036, 39.260000000000005], [-112.036, 44.89]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-112.036, 39.260000000000005], "upper_right": [-100.072, 44.89]}, "type": "FeatureCollection"});
+        
+    
+        var popup_e6d668cecb644110932285055a88df25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fb2d6d866674772aeeebd940e4b7af3 = $(`<div id="html_1fb2d6d866674772aeeebd940e4b7af3" style="width: 100.0%; height: 100.0%;">numero di terremoti: 10829, Fattore di rischio 0-100: 2.1</div>`)[0];
+            popup_e6d668cecb644110932285055a88df25.setContent(html_1fb2d6d866674772aeeebd940e4b7af3);
+        
+
+        geo_json_0123ba40da454588a83b9cdc17ae7894.bindPopup(popup_e6d668cecb644110932285055a88df25)
+        ;
+
+        
+    
+    
+        function geo_json_3aae31a60426462e9974a83693b06668_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_3aae31a60426462e9974a83693b06668_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_3aae31a60426462e9974a83693b06668 = L.geoJson(null, {
+                onEachFeature: geo_json_3aae31a60426462e9974a83693b06668_onEachFeature,
+            
+                style: geo_json_3aae31a60426462e9974a83693b06668_styler,
+        });
+        function geo_json_3aae31a60426462e9974a83693b06668_add (data) {
+            geo_json_3aae31a60426462e9974a83693b06668.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_3aae31a60426462e9974a83693b06668_add({"features": [{"geometry": {"coordinates": [[[-100.072, 44.89], [-88.108, 44.89], [-88.108, 39.260000000000005], [-100.072, 39.260000000000005], [-100.072, 44.89]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-100.072, 39.260000000000005], "upper_right": [-88.108, 44.89]}, "type": "FeatureCollection"});
+        
+    
+        var popup_fefcf51ca38c43dabf7786553df91e8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ebd0a2a71fc43ff996634b5c0d24cea = $(`<div id="html_2ebd0a2a71fc43ff996634b5c0d24cea" style="width: 100.0%; height: 100.0%;">numero di terremoti: 57, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_fefcf51ca38c43dabf7786553df91e8d.setContent(html_2ebd0a2a71fc43ff996634b5c0d24cea);
+        
+
+        geo_json_3aae31a60426462e9974a83693b06668.bindPopup(popup_fefcf51ca38c43dabf7786553df91e8d)
+        ;
+
+        
+    
+    
+        function geo_json_00eed272248d4c6880c939da9d37c166_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_00eed272248d4c6880c939da9d37c166_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_00eed272248d4c6880c939da9d37c166 = L.geoJson(null, {
+                onEachFeature: geo_json_00eed272248d4c6880c939da9d37c166_onEachFeature,
+            
+                style: geo_json_00eed272248d4c6880c939da9d37c166_styler,
+        });
+        function geo_json_00eed272248d4c6880c939da9d37c166_add (data) {
+            geo_json_00eed272248d4c6880c939da9d37c166.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_00eed272248d4c6880c939da9d37c166_add({"features": [{"geometry": {"coordinates": [[[-88.108, 44.89], [-76.144, 44.89], [-76.144, 39.260000000000005], [-88.108, 39.260000000000005], [-88.108, 44.89]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-88.108, 39.260000000000005], "upper_right": [-76.144, 44.89]}, "type": "FeatureCollection"});
+        
+    
+        var popup_ba76664ec3664fc1906e1d577bd95889 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f547b6fd2bb24acd814f2f6fd769ebf7 = $(`<div id="html_f547b6fd2bb24acd814f2f6fd769ebf7" style="width: 100.0%; height: 100.0%;">numero di terremoti: 309, Fattore di rischio 0-100: 0.1</div>`)[0];
+            popup_ba76664ec3664fc1906e1d577bd95889.setContent(html_f547b6fd2bb24acd814f2f6fd769ebf7);
+        
+
+        geo_json_00eed272248d4c6880c939da9d37c166.bindPopup(popup_ba76664ec3664fc1906e1d577bd95889)
+        ;
+
+        
+    
+    
+        function geo_json_9db801ddd1c743c58bc3c77ed58e05e7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_9db801ddd1c743c58bc3c77ed58e05e7_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_9db801ddd1c743c58bc3c77ed58e05e7 = L.geoJson(null, {
+                onEachFeature: geo_json_9db801ddd1c743c58bc3c77ed58e05e7_onEachFeature,
+            
+                style: geo_json_9db801ddd1c743c58bc3c77ed58e05e7_styler,
+        });
+        function geo_json_9db801ddd1c743c58bc3c77ed58e05e7_add (data) {
+            geo_json_9db801ddd1c743c58bc3c77ed58e05e7.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_9db801ddd1c743c58bc3c77ed58e05e7_add({"features": [{"geometry": {"coordinates": [[[-76.144, 44.89], [-64.18, 44.89], [-64.18, 39.260000000000005], [-76.144, 39.260000000000005], [-76.144, 44.89]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-76.144, 39.260000000000005], "upper_right": [-64.18, 44.89]}, "type": "FeatureCollection"});
+        
+    
+        var popup_aa2f47a97c384ca491934fb188be7e67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27dddbd6b2b24219ab6b9481ade5063f = $(`<div id="html_27dddbd6b2b24219ab6b9481ade5063f" style="width: 100.0%; height: 100.0%;">numero di terremoti: 773, Fattore di rischio 0-100: 0.2</div>`)[0];
+            popup_aa2f47a97c384ca491934fb188be7e67.setContent(html_27dddbd6b2b24219ab6b9481ade5063f);
+        
+
+        geo_json_9db801ddd1c743c58bc3c77ed58e05e7.bindPopup(popup_aa2f47a97c384ca491934fb188be7e67)
+        ;
+
+        
+    
+    
+        function geo_json_156c401e72a848eda88ae69c65d6bd95_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "yellow", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_156c401e72a848eda88ae69c65d6bd95_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_156c401e72a848eda88ae69c65d6bd95 = L.geoJson(null, {
+                onEachFeature: geo_json_156c401e72a848eda88ae69c65d6bd95_onEachFeature,
+            
+                style: geo_json_156c401e72a848eda88ae69c65d6bd95_styler,
+        });
+        function geo_json_156c401e72a848eda88ae69c65d6bd95_add (data) {
+            geo_json_156c401e72a848eda88ae69c65d6bd95.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_156c401e72a848eda88ae69c65d6bd95_add({"features": [{"geometry": {"coordinates": [[[-124.0, 50.519999999999996], [-112.036, 50.519999999999996], [-112.036, 44.89], [-124.0, 44.89], [-124.0, 50.519999999999996]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-124.0, 44.89], "upper_right": [-112.036, 50.519999999999996]}, "type": "FeatureCollection"});
+        
+    
+        var popup_d01b4ced43ed413c97c4a9dd26de380b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_94274f8b6e5742b789bd6e187b32e13b = $(`<div id="html_94274f8b6e5742b789bd6e187b32e13b" style="width: 100.0%; height: 100.0%;">numero di terremoti: 106966, Fattore di rischio 0-100: 14.6</div>`)[0];
+            popup_d01b4ced43ed413c97c4a9dd26de380b.setContent(html_94274f8b6e5742b789bd6e187b32e13b);
+        
+
+        geo_json_156c401e72a848eda88ae69c65d6bd95.bindPopup(popup_d01b4ced43ed413c97c4a9dd26de380b)
+        ;
+
+        
+    
+    
+        function geo_json_4a31e6d75c674d5eb60df8af229948c7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_4a31e6d75c674d5eb60df8af229948c7_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_4a31e6d75c674d5eb60df8af229948c7 = L.geoJson(null, {
+                onEachFeature: geo_json_4a31e6d75c674d5eb60df8af229948c7_onEachFeature,
+            
+                style: geo_json_4a31e6d75c674d5eb60df8af229948c7_styler,
+        });
+        function geo_json_4a31e6d75c674d5eb60df8af229948c7_add (data) {
+            geo_json_4a31e6d75c674d5eb60df8af229948c7.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_4a31e6d75c674d5eb60df8af229948c7_add({"features": [{"geometry": {"coordinates": [[[-112.036, 50.519999999999996], [-100.072, 50.519999999999996], [-100.072, 44.89], [-112.036, 44.89], [-112.036, 50.519999999999996]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-112.036, 44.89], "upper_right": [-100.072, 50.519999999999996]}, "type": "FeatureCollection"});
+        
+    
+        var popup_50b1fd177e8d49d7acdfa829f6da37c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7366eca1c2034426af5ded0e37954fc5 = $(`<div id="html_7366eca1c2034426af5ded0e37954fc5" style="width: 100.0%; height: 100.0%;">numero di terremoti: 1547, Fattore di rischio 0-100: 0.3</div>`)[0];
+            popup_50b1fd177e8d49d7acdfa829f6da37c3.setContent(html_7366eca1c2034426af5ded0e37954fc5);
+        
+
+        geo_json_4a31e6d75c674d5eb60df8af229948c7.bindPopup(popup_50b1fd177e8d49d7acdfa829f6da37c3)
+        ;
+
+        
+    
+    
+        function geo_json_63c2432a23f74a55af5c6e0d987919f2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_63c2432a23f74a55af5c6e0d987919f2_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_63c2432a23f74a55af5c6e0d987919f2 = L.geoJson(null, {
+                onEachFeature: geo_json_63c2432a23f74a55af5c6e0d987919f2_onEachFeature,
+            
+                style: geo_json_63c2432a23f74a55af5c6e0d987919f2_styler,
+        });
+        function geo_json_63c2432a23f74a55af5c6e0d987919f2_add (data) {
+            geo_json_63c2432a23f74a55af5c6e0d987919f2.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_63c2432a23f74a55af5c6e0d987919f2_add({"features": [{"geometry": {"coordinates": [[[-100.072, 50.519999999999996], [-88.108, 50.519999999999996], [-88.108, 44.89], [-100.072, 44.89], [-100.072, 50.519999999999996]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-100.072, 44.89], "upper_right": [-88.108, 50.519999999999996]}, "type": "FeatureCollection"});
+        
+    
+        var popup_322ca04909274f7db42f737bb865d953 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b421e9f7313c4532b1979990b8727d8e = $(`<div id="html_b421e9f7313c4532b1979990b8727d8e" style="width: 100.0%; height: 100.0%;">numero di terremoti: 43, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_322ca04909274f7db42f737bb865d953.setContent(html_b421e9f7313c4532b1979990b8727d8e);
+        
+
+        geo_json_63c2432a23f74a55af5c6e0d987919f2.bindPopup(popup_322ca04909274f7db42f737bb865d953)
+        ;
+
+        
+    
+    
+        function geo_json_340d8d3874d74842b967b865d6081c05_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_340d8d3874d74842b967b865d6081c05_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_340d8d3874d74842b967b865d6081c05 = L.geoJson(null, {
+                onEachFeature: geo_json_340d8d3874d74842b967b865d6081c05_onEachFeature,
+            
+                style: geo_json_340d8d3874d74842b967b865d6081c05_styler,
+        });
+        function geo_json_340d8d3874d74842b967b865d6081c05_add (data) {
+            geo_json_340d8d3874d74842b967b865d6081c05.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_340d8d3874d74842b967b865d6081c05_add({"features": [{"geometry": {"coordinates": [[[-88.108, 50.519999999999996], [-76.144, 50.519999999999996], [-76.144, 44.89], [-88.108, 44.89], [-88.108, 50.519999999999996]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-88.108, 44.89], "upper_right": [-76.144, 50.519999999999996]}, "type": "FeatureCollection"});
+        
+    
+        var popup_fd19b4bd665f4bc78c4e56d4e08e7308 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff629ceb5aac488f9629575ab0d716eb = $(`<div id="html_ff629ceb5aac488f9629575ab0d716eb" style="width: 100.0%; height: 100.0%;">numero di terremoti: 88, Fattore di rischio 0-100: 0.0</div>`)[0];
+            popup_fd19b4bd665f4bc78c4e56d4e08e7308.setContent(html_ff629ceb5aac488f9629575ab0d716eb);
+        
+
+        geo_json_340d8d3874d74842b967b865d6081c05.bindPopup(popup_fd19b4bd665f4bc78c4e56d4e08e7308)
+        ;
+
+        
+    
+    
+        function geo_json_8e07927d475f4610bcc945794608c49b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "dashArray": "5, 5", "fillColor": "green", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+        function geo_json_8e07927d475f4610bcc945794608c49b_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_d98c8b29998c4601910e9f682092f919.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_8e07927d475f4610bcc945794608c49b = L.geoJson(null, {
+                onEachFeature: geo_json_8e07927d475f4610bcc945794608c49b_onEachFeature,
+            
+                style: geo_json_8e07927d475f4610bcc945794608c49b_styler,
+        });
+        function geo_json_8e07927d475f4610bcc945794608c49b_add (data) {
+            geo_json_8e07927d475f4610bcc945794608c49b.addData(data)
+                .addTo(map_d98c8b29998c4601910e9f682092f919);
+        }
+            geo_json_8e07927d475f4610bcc945794608c49b_add({"features": [{"geometry": {"coordinates": [[[-76.144, 50.519999999999996], [-64.18, 50.519999999999996], [-64.18, 44.89], [-76.144, 44.89], [-76.144, 50.519999999999996]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "properties": {"lower_left": [-76.144, 44.89], "upper_right": [-64.18, 50.519999999999996]}, "type": "FeatureCollection"});
+        
+    
+        var popup_c189eaf7ca594e42a2f5fd2da0c454de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_911f4e0ba87a4a70b6896f8bdb312d96 = $(`<div id="html_911f4e0ba87a4a70b6896f8bdb312d96" style="width: 100.0%; height: 100.0%;">numero di terremoti: 834, Fattore di rischio 0-100: 0.3</div>`)[0];
+            popup_c189eaf7ca594e42a2f5fd2da0c454de.setContent(html_911f4e0ba87a4a70b6896f8bdb312d96);
+        
+
+        geo_json_8e07927d475f4610bcc945794608c49b.bindPopup(popup_c189eaf7ca594e42a2f5fd2da0c454de)
+        ;
+
+        
+    
+</script>
