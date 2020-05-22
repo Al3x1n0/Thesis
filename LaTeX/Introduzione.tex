@@ -1,18 +1,20 @@
 \chapter*{Introduzione}
 \addcontentsline{toc}{chapter}{Introduzione}
 
-\section*{Premessa}
-\addcontentsline{toc}{section}{Premessa}
-Nel Capitolo \ref{background}, dove viene fornito un Background all'argomento, faccio riferimento ad enti italiani, ma il discorso sar\`a analogo per gli altri paesi, cambieranno soltanto gli enti che si occupano della raccolta e del monitoraggio dei dati e, gli enti che hanno scopi di protezione civile.\\
-Quello che andr\`o a fare \`e approcciare alla predizione dei terremoti in modo diverso dall'analisi dei precursori (vedi Sezione \ref{previsione}).\\
-Quindi prender\`o in analisi soltanto i dati storici dei terremoti messi a disposizione dagli enti nazionali che li raccolgono. L'idea di fondo \`e che tutto il lavoro che andr\`o a svolgere dovr\`a essere estendibile ad ogni altra realt\`a che non sia solo quella nazionale, quindi tutto \`e mirato a sviluppare uno standard che mi permetta di analizzare una grande mole di dati a prescindere della provenienza di essa.
-
-
-\section*{Scopo della tesi}
-\addcontentsline{toc}{section}{Scopo della tesi}
-Lo scopo di questa tesi \`e sviluppare due applicativi tali che preso in input un catalogo contenente record\footnote{Oggetto o struttura dati eterogenea fatta da dati compositi, contenente quindi un insieme di campi o elementi, ciascuno dei quali identificato da un nome univoco e da un tipo di dato} rappresentati dai valori: \textbf{magnitudo}, posizione (\textbf{Latitudine} e \textbf{Longitudine}) e \textbf{data} di un terremoto, possano dare in output dei risultati utili all'analisi dei terremoti, dopo aver eseguito opportune operazioni e controlli. Questi risultati saranno rappresentati su una mappa, in quanto i terremoti stessi si verificano in una area geografica ed \`e quindi pi\`u facile in questo modo analizzare i dati; infatti la rappresentazione su mappa permetter\`a un'analisi dei dati pi\`u semplificata, grazie all'utilizzo di forme geometriche e colori che possono essere sovrapposti alla mappa.\\
-L'obiettivo che mi pongo nello sviluppo di questi applicativi si pu\`o facilmente riassumere in due domande:
+In tutto il mondo ci si pone da anni la domanda: \`E possibile prevedere i terremoti?\\
+Ad oggi non \`e ancora possibile rispondervi, ma la maggior parte degli esperti in geologia conviene sul fatto che sia impossibile. Nonostante questa probabile impossibilit\`a rimane uno dei campi di studi pi\`u importanti nel settore dei terremoti. Questo perch\'e i danni causati da un terremoto, se quest'ultimo ha un intensit\`a superiore ad una certa soglia, possono essere catastrofici. Quindi riuscire a darne avviso precedentemente potrebbe non soltanto ridurre i danni, ma salvare molte vite umane.\\
+Prendendo le parole della sezione di Napoli che si occupa dello studio dei terremoti: \begin{displayquote}
+``\`E possibile, per\`o, attraverso l' individuazione delle aree sismogenetiche, lo studio della loro sismicit\`a storica e recente, dell'assetto tettonico e geologico definire la pericolosit\`a sismica del territorio in base alla quale adottare adeguate misure di prevenzione che possano ridurre gli effetti dei terremoti.''
+\end{displayquote}
+La pericolosit\`a di cui parla la sezione di Napoli, \`e un'argomento strettamente correlato con la previsione. Questo perch\'e stimare quanto \`e pericolosa una determinata area geografica, ci permette di prestare maggiore attenzione alle tecniche di costruzione degli edifici presenti in quel territorio e di sensibilizzare la popolazione che andr\`a ad abitarli. Questo permetter\`a non soltanto una reazione pi\`u corretta in caso di terremoto da parte delle persone, ma anche un rischio di crollo degli edifici minore.\\
+Mentre la previsione \`e ad oggi una domanda aperta, per la pericolosit\`a di una certa area geografica si \`e riusciti a creare delle mappe che con un'opportuna colorazione riportano quanto \`e rischiosa una certa area geografica. Questo \`e possibile attraverso lo studio dei dati storici a disposizione (quindi dei terremoti avvenuti nel passato nell'area geografica presa in considerazione) e anche grazie al costante studio dell'assetto tettonico e geologico del terreno da parte di esperti. Come si potr\`a vedere nel Background di seguito (vedi Figura \ref{img:mappaPericolo}), anche per il nostro territorio nazionale \`e presente una mappa riportante la pericolosit\`a sismica dell'Italia.\\
+L'obiettivo che mi pongo \`e di rispondere a due domande:
 \begin{itemize}
-    \item Quanto \`e rischiosa una determinata area geografica rispetto alle altre?
-    \item Quando avverr\`a il prossimo terremoto in una determinata area geografica?
+    \item \textbf{Quanto \`e rischiosa una determinata area geografica rispetto alle altre?}
+    \item \textbf{Quando avverr\`a il prossimo terremoto in una determinata area geografica?}
 \end{itemize}
+Come evidenziato in precedenza i due problemi, pericolosit\`a e previsione, sono strettamente correlati, ma mentre per il primo troviamo una risposta pi\`u semplice, rispondere al secondo \`e decisamente pi\`u complicato.\\
+Quello che andr\`o a fare \`e approcciare ai due problemi tenendo in considerazione soltanto i dati storici, facendo quindi un analisi di questi mirata a generare in output dei risultati, rappresentabili su mappa. Per fare ci\`o andr\`o ad utilizzare il linguaggio di programmazione \textit{Python} e due librerie, \textit{Pandas} e \textit{Folium}. La prima libreria (\textit{Pandas}) permette di manipolare database di grandi dimensioni esportati in vari formati (nel mio caso .csv), rendendo le operazioni semplici e veloci. La seconda libreria (\textit{Folium}) permette invece di rappresentare i dati su mappa inserendoci forme geometriche e popup.\\
+Per rispondere alle due domande considerer\`o un'area geografica definita da un rettangolo che andr\`o a suddividere in celle. \\
+Nel primo caso calcoler\`o la somma delle magnitudo dei terremoti occorsi in ogni cella, successivamente dividendo ogni somma ottenuta per la somma totale avr\`o un vettore normalizzato che somma a 1. Infine colorer\`o la mappa basandomi sul vettore normalizzato.\\
+Nel secondo caso estrarr\`o l'intervallo di tempo tra i terremoti con magnitudo maggiore di m occorsi in ogni cella, successivamente calcoler\`o media e varianza della frequenza tra un terremoto ed il successivo per ogni cella ed infine assumendo che l'intervallo di tempo si comporti come una variabile casuale X, stimer\`o con la disuguaglianza di Chebyshev un intervallo di confidenza, che mi permetter\`a di fare una previsione in giorni.
